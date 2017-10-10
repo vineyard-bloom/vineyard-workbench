@@ -1,6 +1,6 @@
 {
   "name": "vineyard-workbench",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "Project to assist development on multiple Vineyard libraries",
   "main": "source/index.js",
   "types": "source/index.d.ts",
