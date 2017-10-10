@@ -1,0 +1,21 @@
+{
+  "name": "vineyard-workbench",
+  "version": "0.2.6",
+  "description": "Project to assist in working on multiple Vineyard projects.",
+  "main": "source/index.js",
+  "types": "source/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git@github.com:vineyard-bloom/vineyard-workbench.git",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^8.0.34",
+    "@types/shelljs": "^0.7.4",
+    "shelljs": "^0.7.8"
+  },
+  "devDependencies": {
+    "source-map-support": "^0.4.14"
+  }
+}
