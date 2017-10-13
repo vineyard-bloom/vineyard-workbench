@@ -10,6 +10,7 @@ const projects = [
   'ethereum',
   'ground',
   'lawn',
+  'lawn-logging',
   'logging',
   'schema',
   'server-template',
@@ -38,6 +39,10 @@ export function installProject(projectName: string) {
 export function crossLink(projectName: string) {
   console.log('Downloading/linking dependencies for', projectName)
   shell.cd(projectName)
+
+  // Ideally yarn would be run after linking but currently a bug in yarn
+  // causes all of the links to be overwritten.
+  shellCommand("yarn")
   const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'))
   const dependencies = packageJson.dependencies
   for (let dependencyName in dependencies) {
@@ -45,7 +50,6 @@ export function crossLink(projectName: string) {
       shellCommand("yarn link " + dependencyName)
     }
   }
-  shellCommand("yarn")
   shell.cd('..')
 }
 
