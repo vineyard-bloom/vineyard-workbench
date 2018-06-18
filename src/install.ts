@@ -4,18 +4,13 @@ import * as shell from 'shelljs'
 
 const projects = [
   'bitcoin',
-  'cellar',
   'cron',
-  'error-logging',
   'ethereum',
   'ground',
   'lawn',
-  'lawn-logging',
-  'logging',
-  'schema',
+  'minotaur',
   'server-template',
-  'users',
-  'village'
+  'users'
 ]
 
 function shellCommand(command: string) {
