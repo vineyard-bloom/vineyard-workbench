@@ -2,8 +2,8 @@
   "name": "vineyard-workbench",
   "version": "0.3.0",
   "description": "Project to assist development on multiple Vineyard libraries",
-  "main": "source/index.js",
-  "types": "source/index.d.ts",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
