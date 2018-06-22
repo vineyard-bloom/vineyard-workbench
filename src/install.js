@@ -8,6 +8,7 @@ var projects = {
     'blockchain': '1.0.0-beta',
     'cron': '1.x',
     'data': '1.0.0-beta',
+    'docs': '1.0.0-beta',
     'ethereum': '1.0.0-beta',
     'ground': '1.x',
     'lawn': '1.x',
