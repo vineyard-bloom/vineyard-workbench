@@ -31,6 +31,7 @@ export function installProject(projectName: string, branch: string) {
   shellCommand("git clone git@github.com:vineyard-bloom/" + projectName + ".git")
   shell.cd(projectName)
   shellCommand('git checkout ' + branch)
+  shellCommand('git pull')
   shellCommand("yarn unlink")
   shellCommand("yarn link")
   shell.cd('..')
