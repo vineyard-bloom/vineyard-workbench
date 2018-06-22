@@ -26,7 +26,8 @@ function shellCommand(command) {
     }
 }
 function installProject(projectName, branch) {
-    shellCommand("git clone git@github.com:vineyard-bloom/" + projectName + ".git");
+    if (!fs.existsSync(projectName))
+        shellCommand("git clone git@github.com:vineyard-bloom/" + projectName + ".git");
     shell.cd(projectName);
     shellCommand('git checkout ' + branch);
     shellCommand('git pull');
