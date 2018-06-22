@@ -29,13 +29,16 @@ function shellCommand(command: string) {
 }
 
 export function installProject(projectName: string, branch: string) {
-  if (!fs.existsSync(projectName))
-    shellCommand("git clone git@github.com:vineyard-bloom/" + projectName + ".git")
+  if (!fs.existsSync(projectName)) {
+    shellCommand("git clone git@github.com:vineyard-bloom/" + projectName + ".git --branch " + branch)
+    shell.cd(projectName)
+  }
+  else {
+    shell.cd(projectName)
+    shellCommand('git pull')
+    shellCommand("yarn unlink")
+  }
 
-  shell.cd(projectName)
-  shellCommand('git checkout ' + branch)
-  shellCommand('git pull')
-  shellCommand("yarn unlink")
   shellCommand("yarn link")
   shell.cd('..')
 }
