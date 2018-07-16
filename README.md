@@ -4,7 +4,7 @@ This project clones and symlinks the main Vineyard projects, creating an environ
 
 ## Background
 
-Workbench is designed to make it easier to work on vineyard modules that your app may be using without having to fully merge any changes you may have made. This is done by using `yarn link` to symlink a local copy of the vineyard-suite into your app's `node_modules` directory.
+Workbench is designed to make it easier to work on vineyard modules that your app may be using without having to fully merge any changes you may have made. This is done by using `yarn link` to symlink a local copy of a vineyard module into your app's `node_modules` directory.
 
 (Workbench is still under development, so the process for symlinking your local vineyard packages is as follows: 
 1. Go to your desired local vineyard package root directory.
